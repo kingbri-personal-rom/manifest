@@ -18,6 +18,10 @@
   <remote  name="kingbri-rom"
            fetch="https://github.com/kingbri-personal-rom"
            revision="refs/heads/ten" />
+  
+  <remote  name="KingKernel"
+           fetch="https://github.com/King-Kernel"
+           revision="refs/heads/stable" />
 
   <!-- Extra apps and tools -->
   <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="gahs" />
@@ -36,7 +40,7 @@
   <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="pdx" />
   <project path="vendor/google" name="vendor_google" remote="gahs" />
   <project path="device/google/marlin" name="device_google_marlin" remote="gahs" />
-  <project path="kernel/google/marlin" name="KingKernel-rebased" remote="github/King-Kernel" />
+  <project path="kernel/google/marlin" name="KingKernel-rebased" remote="KingKernel" />
   
   <!-- kingbri customizations -->
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
