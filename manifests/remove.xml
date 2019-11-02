@@ -46,4 +46,6 @@
   <remove-project name="platform/packages/apps/Settings" />
   <remove-project name="platform/packages/apps/SettingsIntelligence" />
   <remove-project name="platform/build" />
+  <remove-project name="platform/packages/apps/WallpaperPicker2" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
 </manifest>
