@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <remote  name="pdx"
+           fetch="https://github.com/pixeldust-project-x"
+           revision="refs/heads/ten" />
+  
+  <remote  name="gahs"
+           fetch="https://github.com/gahsrom"
+           revision="refs/heads/ten" />
+  
+  <remote  name="kingbri-rom"
+           fetch="https://github.com/kingbri-personal-rom"
+           revision="refs/heads/ten" />
+
+  <!-- Extra apps and tools -->
+  <project path="packages/apps/Settings" name="platform_packages_apps_Settings" groups="pdk-fs" remote="gahs" />
+  <project path="packages/apps/SettingsIntelligence" name="platform_packages_apps_SettingsIntelligence" groups="pdk-fs" remote="gahs" />
+  <project path="prebuilts/tools-gahs" name="platform_prebuilts_tools-gahs" groups="pdk,tools" clone-depth="1" remote="gahs" />
+  <project path="build/make" name="platform_build" remote="gahs" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  
+  <!-- kingbri customizations -->
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
+  <project path="vendor/kingbri" name="android_vendor_kingbri" remote="kingbri-rom" />
