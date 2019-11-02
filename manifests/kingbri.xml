@@ -13,7 +13,7 @@
   
   <remote  name="gahs"
            fetch="https://github.com/gahsrom"
-           revision="refs/heads/ten" />
+           revision="refs/heads/gahs10" />
   
   <remote  name="kingbri-rom"
            fetch="https://github.com/kingbri-personal-rom"
