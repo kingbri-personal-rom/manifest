@@ -31,7 +31,7 @@ $ cd WORKSPACE
 
 # Install Repo in the created directory
 # Use a real name/email combination, if you intend to submit patches
-$ repo init -u https://github.com/pixeldust-project-x/manifest -b ten
+$ repo init -u https://github.com/kingbri-personal-rom/manifest -b ten
 ```
 
 ### Downloading the source tree ###
@@ -46,7 +46,7 @@ and their change histories.
 # The -j# option specifies the number of concurrent download threads to run.
 # 4 threads is a good number for most internet connections.
 # You may need to adjust this value if you have a particularly slow connection.
-$ repo sync -j4 --force-sync --no-tags --no-clone-bundle
+repo sync -j4 --force-sync --no-tags --no-clone-bundle
 ```
 
 #### Syncing specific projects ####
@@ -62,7 +62,7 @@ a large change that spans across multiple projects.
 # For example, enter pixeldust-project-caf/android_frameworks_base or
 # frameworks/base to sync the frameworks/base repository
 
-$ repo sync PROJECT -j4 --force-sync --no-tags --no-clone-bundle
+repo sync PROJECT -j4 --force-sync --no-tags --no-clone-bundle
 ```
 
 ### Code ###
