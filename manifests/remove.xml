@@ -44,25 +44,6 @@
   <remove-project name="device/sample" />
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/build" />
-  <remove-project name="platform/build/soong" />
   <remove-project name="platform/packages/apps/WallpaperPicker2" />
   <remove-project name="platform/packages/apps/ThemePicker" />
-  <remove-project name="platform/hardware/qcom/audio" />
-  <remove-project name="platform/hardware/qcom/display" />
-  <remove-project name="platform/frameworks/opt/telephony" />
-  <remove-project name="platform/packages/services/Telephony" />
-  <remove-project name="platform/packages/services/Telecomm" />
-  <remove-project name="platform/hardware/qcom/bootctrl" />
-  <remove-project name="platform/hardware/qcom/media" />
-  <remove-project name="platform/hardware/qcom/gps" />
-  <remove-project name="platform/hardware/qcom/wlan" />
-  <remove-project name="platform/hardware/qcom/bt" />
-  <remove-project name="platform/hardware/qcom/keymaster" />
-  <remove-project name="platform/hardware/qcom/data/ipacfg-mgr" />
-  <remove-project name="platform/hardware/libhardware" />
-  <remove-project name="platform/hardware/libhardware_legacy" />
-  <remove-project name="platform/hardware/nxp/nfc" />
-  <remove-project name="platform/hardware/ril" />
-  <remove-project name="platform/hardware/interfaces" />
-  <remove-project name="platform/build/blueprint" />
 </manifest>
