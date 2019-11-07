@@ -23,46 +23,66 @@
            fetch="https://github.com/King-Kernel"
            revision="refs/heads/stable" />
 
-  <remote  name="LineageOS"
-           fetch="https://github.com/LineageOS"
-           revision="refs/heads/lineage-17.0" />
+  <remote  name="nos"
+           fetch="https://github.com/nitrogen-project"
+           revision="refs/heads/10" />
 
-  <!-- Extra apps and tools -->
-  <project path="prebuilts/tools-gahs" name="platform_prebuilts_tools-gahs" groups="pdk,tools" clone-depth="1" remote="gahs" />
-  <project path="build/make" name="build_make" remote="kingbri-rom" >
-    <copyfile src="core/root.mk" dest="Makefile" />
-    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
-    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
-    <linkfile src="core" dest="build/core" />
-    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
-    <linkfile src="target" dest="build/target" />
-    <linkfile src="tools" dest="build/tools" />
-  </project>
-  <project path="build/soong" name="build_soong" remote="kingbri-rom" >
-    <linkfile src="root.bp" dest="Android.bp" />
-    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-  </project>
-  <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="pdx" />
-  <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="pdx" />
-  <project path="vendor/google" name="vendor_google" remote="gahs" />
-  <project path="device/google/marlin" name="android_device_google_marlin" remote="kingbri-rom" />
-  <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="kingbri-rom" />
-  <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="pdx" />
-  <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="pdx" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="pdx" /> 
-  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="pdx" />
-  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="pdx" />
-  <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/fm-commonsys" name="android_vendor_qcom_opensource_fm-commonsys" remote="LineageOS" groups="qcom,qcom_fm" />
-  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/libfmjni" name="android_vendor_qcom_opensource_libfmjni" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/power" name="android_vendor_qcom_opensource_power" remote="LineageOS" groups="qcom,pdk-qcom" />
-  <project path="vendor/qcom/opensource/thermal-engine" name="android_vendor_qcom_opensource_thermal-engine" remote="LineageOS"groups="qcom,pdk-qcom" />
+  <!-- Android Build System -->
+    <project path="build/make" name="build_make" remote="kingbri-rom" >
+      <copyfile src="core/root.mk" dest="Makefile" />
+      <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+      <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+      <linkfile src="core" dest="build/core" />
+      <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+      <linkfile src="target" dest="build/target" />
+      <linkfile src="tools" dest="build/tools" />
+    </project>
+    <project path="build/soong" name="build_soong" remote="kingbri-rom" >
+      <linkfile src="root.bp" dest="Android.bp" />
+      <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+    </project>
   
-  <!-- kingbri customizations -->
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
-  <project path="vendor/kingbri" name="android_vendor_kingbri" remote="kingbri-rom" />
+  <!-- qcom-sepolicy -->
+    <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="nos" revision="10" />
+  
+  <!-- Frameworks -->
+    <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="nos" revision="10" />
+    <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
+    
+  <!-- hardware -->
+    <project path="hardware/qcom/audio" name="android_hardware_qcom_audio" remote="nos" revision="10" />
+    <project path="hardware/qcom/bootctrl" name="android_hardware_qcom_bootctrl" remote="nos" revision="10" />
+    <project path="hardware/qcom/bt" name="android_hardware_qcom_bt" remote="nos" revision="10" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="nos" revision="10" />
+    <project path="hardware/qcom/gps" name="android_hardware_qcom_gps" remote="nos" revision="10" />
+    <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="nos" revision="10" />
+    <project path="hardware/qcom/wlan" name="android_hardware_qcom_wlan" remote="nos" revision="10" />
+    <project path="hardware/qcom/keymaster" name="android_hardware_qcom_keymaster" remote="nos" revision="10" />
+    <project path="hardware/qcom/data/ipacfg-mgr" name="android_hardware_qcom_data_ipacfg-mgr" remote="nos" revision="10" />
+    <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="nos" revision="10" />
+    <project path="hardware/interfaces" name="android_hardware_interfaces" remote="nos" revision="10" />
+    <project path="hardware/ril" name="android_hardware_ril" remote="nos" revision="10" />
+  
+  <!-- services -->
+    <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="nos" revision="10" />
+    <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="nos" revision="10" />
+  
+  <!-- Vendor -->
+    <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="nos" revision="10" />
+    <project path="vendor/kingbri" name="android_vendor_kingbri" remote="kingbri-rom" />
+    <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="android_vendor_qcom_opensource_data-ipa-cfg-mgr" remote="nos" revision="10" />
+    <project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" remote="nos" revision="10" />
+    <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="nos" revision="10" />
+    <project path="vendor/qcom/opensource/audio" name="android_vendor_qcom_opensource_audio" remote="nos" revision="10" />
+    <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="nos" revision="10" />
+
+  <!-- miscellaneous -->
+     <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="pdx" />
+     <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="pdx" />
+     <project path="vendor/google" name="vendor_google" remote="gahs" />
+     <project path="prebuilts/tools-gahs" name="platform_prebuilts_tools-gahs" groups="pdk,tools" clone-depth="1" remote="gahs" />
+
+  <!-- kingbri trees -->
+    <project path="device/google/marlin" name="android_device_google_marlin" remote="kingbri-rom" />
+    <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="kingbri-rom" />
 </manifest>
