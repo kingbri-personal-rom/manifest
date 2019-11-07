@@ -64,4 +64,5 @@
   <remove-project name="platform/hardware/nxp/nfc" />
   <remove-project name="platform/hardware/ril" />
   <remove-project name="platform/hardware/interfaces" />
+  <remove-project name="platform/build/blueprint" />
 </manifest>
