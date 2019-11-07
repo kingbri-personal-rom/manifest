@@ -23,6 +23,10 @@
            fetch="https://github.com/King-Kernel"
            revision="refs/heads/stable" />
 
+  <remote  name="Lineage"
+           fetch="https://github.com/LineageOS"
+           revision="refs/heads/lineage-17.0" />
+
   <!-- Extra apps and tools -->
   <project path="prebuilts/tools-gahs" name="platform_prebuilts_tools-gahs" groups="pdk,tools" clone-depth="1" remote="gahs" />
   <project path="build/make" name="build_make" remote="kingbri-rom" >
@@ -45,6 +49,10 @@
   <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="kingbri-rom" />
   <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="pdx" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="pdx" />
+  <project path="vendor/codeaurora/telephony" name="android_vendor_codeaurora_telephony" remote="Lineage" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="Lineage" groups="pdk" />
+  <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="Lineage" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/TelephonyProvider" name="android_packages_providers_TelephonyProvider" remote="Lineage" groups="pdk-cw-fs,pdk-fs" />
   
   <!-- kingbri customizations -->
   <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />

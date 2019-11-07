@@ -49,4 +49,7 @@
   <remove-project name="platform/packages/apps/ThemePicker" />
   <remove-project name="platform/hardware/qcom/media" />
   <remove-project name="platform/hardware/qcom/display" />
+  <remove-project name="platform/frameworks/opt/telephony" />
+  <remove-project name="platform/packages/providers/TelephonyProvider" />
+  <remove-project name="platform/packages/services/Telephony" />
 </manifest>
