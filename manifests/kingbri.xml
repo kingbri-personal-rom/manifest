@@ -48,3 +48,4 @@
 
   <!-- kingbri trees -->
     <project path="device/google/marlin" name="android_device_google_marlin" remote="kingbri-rom" />
+</manifest>
