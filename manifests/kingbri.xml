@@ -29,10 +29,6 @@
       <linkfile src="target" dest="build/target" />
       <linkfile src="tools" dest="build/tools" />
     </project>
-    <project path="build/soong" name="build_soong" remote="kingbri-rom" >
-      <linkfile src="root.bp" dest="Android.bp" />
-      <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
-    </project>
   
   <!-- Frameworks -->
     <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
