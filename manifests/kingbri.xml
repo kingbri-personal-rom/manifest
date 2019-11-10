@@ -21,7 +21,7 @@
   
   <remote  name="KingKernel"
            fetch="https://github.com/King-Kernel"
-           revision="refs/heads/ten" />
+           revision="refs/heads/master" />
   
   <!-- Android Build System -->
     <project path="build/make" name="build_make" remote="kingbri-rom" >
