@@ -31,6 +31,7 @@
   <remove-project name="device/google/cuttlefish_vmm" />
   <remove-project name="device/google/fuchsia" />
   <remove-project name="device/google/marlin" />
+  <remove-project name="device/google/marlin-kernel" />
   <remove-project name="device/google/muskie" />
   <remove-project name="device/google/taimen" />
   <remove-project name="device/google/wahoo" />
@@ -44,4 +45,5 @@
   <remove-project name="platform/frameworks/base" />
   <remove-project name="platform/build" />
   <remove-project name="platform/packages/apps/Launcher3" />
+  <remove-project name="platform/packages/apps/ThemePicker" />
 </manifest>
