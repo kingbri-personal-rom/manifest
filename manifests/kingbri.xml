@@ -31,7 +31,7 @@
     </project>
   
   <!-- Frameworks -->
-    <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="kingbri-rom" />
+    <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="gahs" />
     
   <!-- Vendor -->
     <project path="vendor/kingbri" name="android_vendor_kingbri" remote="kingbri-rom" />
