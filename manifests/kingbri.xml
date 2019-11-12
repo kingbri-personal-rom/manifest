@@ -43,7 +43,7 @@
   <!-- miscellaneous -->
      <project path="vendor/google" name="vendor_google" remote="gahs" />
      <project path="prebuilts/tools-gahs" name="platform_prebuilts_tools-gahs" groups="pdk,tools" clone-depth="1" remote="gahs" />
-     <project path="packages/apps/Launcher3" name="platform_packages_apps_Launcher3" groups="pdk-fs" remote="gahs" />
+     <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" groups="pdk-fs" remote="pdx" />
      <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="pdx" />
      
   <!-- kingbri trees -->
